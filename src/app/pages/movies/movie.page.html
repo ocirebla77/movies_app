@@ -6,8 +6,17 @@
 
 <ion-content>
   <ion-searchbar
-  [(ngModel)] = "searchTerm"
-  (ionChange) = "searchChanged($event)"
+    [(ngModel)]="searchTerm"
+    (ionChange)="searchChanged($event)"
   ></ion-searchbar>
 
+  <ion-item>
+    <ion-label>Select SeachType</ion-label>
+    <ion-select>
+      <ion-select-option value="">All</ion-select-option>
+      <ion-select-option value="movie">movie</ion-select-option>
+      <ion-select-option value="series">series</ion-select-option>
+      <ion-select-option value="episode">episode</ion-select-option>
+    </ion-select>
+  </ion-item>
 </ion-content>
